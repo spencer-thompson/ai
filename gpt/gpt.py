@@ -21,9 +21,14 @@ class GPT():
 
         return completion.choices[0].message
     
+    def models(self):
+        return self.client.models.list()
+    
     # --- Want to build out each api endpoint ---
 
     # Chat
+    def chat(self):
+        pass
 
     # TTS
 
@@ -40,4 +45,4 @@ class GPT():
 
 if __name__ == "__main__":
     ai = GPT()
-    print(ai.run())
+    print(ai.models())
