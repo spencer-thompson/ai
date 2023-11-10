@@ -9,6 +9,7 @@ class GPT():
 
         self.client = OpenAI()
 
+    # Testing method
     def run(self):
         completion = self.client.chat.completions.create(
             model="gpt-4-1106-preview",
@@ -19,6 +20,22 @@ class GPT():
         )
 
         return completion.choices[0].message
+    
+    # --- Want to build out each api endpoint ---
+
+    # Chat
+
+    # TTS
+
+    # STT
+
+    # Vision
+
+    # Image gen
+
+    # Moderation
+
+    # Assistants
     
 
 if __name__ == "__main__":
