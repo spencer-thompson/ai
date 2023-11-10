@@ -1,19 +1,13 @@
 """
 Docstring
 """
-import os
-
 from openai import OpenAI
-from dotenv import load_dotenv
 
 class GPT():
 
     def __init__(self):
-        load_dotenv()
-        self.client = OpenAI(
-            api_key=os.getenv('OPENAI_API_KEY'),
-            organization=os.getenv('OPENAI_ORG_ID')
-        )
+
+        self.client = OpenAI()
 
     def run(self):
         completion = self.client.chat.completions.create(
@@ -25,3 +19,8 @@ class GPT():
         )
 
         return completion.choices[0].message
+    
+
+if __name__ == "__main__":
+    ai = GPT()
+    print(ai.run())
