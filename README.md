@@ -9,3 +9,8 @@ The OpenAI Assistant Integration Suite is an innovative project designed to harn
 - **AI Tutoring System**: Leveraging AI to provide personalized educational support.
 - **Digital Secretary**: Automate scheduling, reminders, and email management.
 - **Enhanced Communication**: Integrate AI into various communication mediums for efficient and intelligent interactions.
+
+## Acknowledgments
+
+- **Dr. Ahmed Alsharif**: For supporting this project so wholeheartedly.
+- **Dr. Armen Ilikchyan**: For paving the way, and providing opportunities we never thought possible.
