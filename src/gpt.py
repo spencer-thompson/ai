@@ -38,6 +38,10 @@ class GPT():
         """Returns all OpenAI models"""
         return self.client.models.list()
     
+    def update_model(self, new_model: str) -> None:
+        """Updates the model"""
+        self.model = new_model
+    
     # --- Want to build out each api endpoint ---
 
     # Chat
@@ -66,7 +70,7 @@ class GPT():
 
         self.add_msg(role = "user", content = query)
 
-        completion = self.client.completions.create(
+        completion = self.client.chat.completions.create(
             model = self.model,
             messages = self.sys_msg + self.messages,
             temperature = self.temp,
