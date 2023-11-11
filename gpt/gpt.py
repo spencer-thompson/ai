@@ -1,13 +1,20 @@
 """
 Docstring
 """
+import os
+
 from openai import OpenAI
+from dotenv import load_dotenv
+
 
 class GPT():
 
     def __init__(self):
 
-        self.client = OpenAI()
+        load_dotenv()
+        self.client = OpenAI(
+            api_key=os.getenv("OPENAI_KEY"),
+        )
 
     # Testing method
     def run(self):
@@ -30,19 +37,26 @@ class GPT():
     def chat(self):
         pass
 
+    def chats(self):
+        pass
+
     # TTS
+    def speech(self):
+        pass
 
     # STT
-
-    # Vision
+    def whisper(self):
+        pass
 
     # Image gen
 
     # Moderation
+    def mod(self, message: str):
+        return self.client.moderations.create(input=message)
 
     # Assistants
     
 
 if __name__ == "__main__":
     ai = GPT()
-    print(ai.models())
+    print(ai.run())
