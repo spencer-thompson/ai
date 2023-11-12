@@ -51,11 +51,9 @@ class GPT():
         self.add_msg(role = "user", content = query)
 
         completion = self.client.chat.completions.create(
-            model="gpt-4-1106-preview",
-            messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": "Hello!"}
-            ]
+            model = self.model,
+            messages = self.sys_msg + self.messages,
+            temperature = self.temp,
         )
 
         self.add_msg(
