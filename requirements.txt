@@ -2,3 +2,7 @@ openai
 python-dotenv
 simpleaudio
 pydub
+pyperclip
+plyer
+pyaudio
+opuslib

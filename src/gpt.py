@@ -4,7 +4,9 @@ Docstring
 import os
 
 from openai import OpenAI
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
+
+from env import openai_key
 
 
 class GPT():
@@ -25,9 +27,9 @@ class GPT():
         self.model = model
         self.temp = temp
 
-        load_dotenv()
+        # load_dotenv()
         self.client = OpenAI(
-            api_key=os.getenv("OPENAI_KEY"),
+            api_key=openai_key,
         )
 
     def __str__(self):
